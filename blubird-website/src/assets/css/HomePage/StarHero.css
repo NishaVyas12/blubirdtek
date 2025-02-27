@@ -1,0 +1,108 @@
+.star {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-color: #00020E;
+    position: relative;
+    
+    
+}
+
+.star_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+   
+    width: 100%;
+    height: 100%;
+    z-index: 0; 
+}
+
+.star_video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+       
+.star_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+       
+.star_hero {
+    position: relative;
+    z-index: 2; 
+}
+
+.star_hero h1 {
+    font-size: 2.5rem;
+    font-family: "Helvetica";
+    font-weight: normal;
+    margin-bottom: 24px;
+}
+
+.star_hero p {
+    font-size: 1.2rem;
+    font-family: "Helvetica";
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 54px;
+}
+
+    
+.star_hero button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+
+@media (max-width: 550px){
+    .star_hero h1 {
+        font-size: 1.6rem !important;
+    }
+    .star_hero p {
+        font-size: 0.8rem !important;
+    }
+}
+
+@media (max-width: 900px){
+    .star_hero h1 {
+        font-size: 2.5rem;
+    }
+    .star_hero p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1050px){
+    .star_hero h1 {
+        font-size: 3rem;
+    }
+    .star_hero p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 2000px){
+    .star_hero h1 {
+        font-size: 5rem;
+    }
+    .star_hero p {
+        font-size: 1.8rem;
+    }
+}

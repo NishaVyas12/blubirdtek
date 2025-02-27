@@ -1,0 +1,88 @@
+.project_section {
+  position: relative;
+  overflow: hidden;
+  height: 200vh;
+  background-color: #00020E;
+}
+
+.projectsection_gallery-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.projectsection_gallery {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  gap: 10px;
+  height: 100vh;
+}
+
+.projectsection_gallery-item {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+
+.projectsection_gallery-item img,
+.projectsection_gallery-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+
+.projectsection_gallery-item.center {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  z-index: 2;
+}
+
+.projectsection_gallery-item:not(.center) {
+  filter: brightness(0.8);
+}
+
+.projectsection_heading h2 {
+  text-align: center;
+  padding: 6rem 0 4rem 0;
+  font-size: 2rem;
+  line-height: 1.4;
+  font-family: "NeueHaasDisplayRegular";
+  font-weight: normal;
+}
+
+@media (max-width: 550px) {
+  .projectsection_heading h2{
+    font-size: 1.2rem !important;
+  }
+  .projectsection_gallery-container {
+    height: 120vh; 
+  }
+  .projectsection_gallery {
+    height: 120vh;
+  }
+  
+}
+
+@media (max-width: 900px) {
+  .projectsection_heading h2{
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .projectsection_heading h2{
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 2000px) {
+  .projectsection_heading h2{
+    font-size: 3.5rem;
+  }
+}

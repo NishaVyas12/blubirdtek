@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+header {
+  font-family: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    letter-spacing: normal;
+}
+
+body {
+    background-color: #00020E;
+}
+
+.header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+/* Logo */
+.logo {
+    margin-left: 4rem;
+}
+
+.logo img {
+    width: 120px;
+}
+
+/* Navigation Menu */
+.head_nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.head_nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+.head_nav ul li {
+    display: inline-block;
+}
+
+.head_nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Hide hamburger and close button on desktop */
+.menu-icon,
+.close {
+    display: none;
+}
+
+/* ✅ Mobile Responsive Menu */
+@media (max-width: 768px) {
+    .header {
+        padding: 0;
+    }
+    
+    .logo {
+        margin-left: 1.5rem;
+    }
+
+    /* Hide default menu on mobile */
+    .head_nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        text-align: center;
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    }
+
+    /* Show Close Button in Mobile Menu */
+    .close {
+        display: block;
+        color: #000;
+        text-align: right;
+        padding: 15px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .head_nav ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .head_nav ul li a {
+        color: #000;
+        font-size: 16px;
+    }
+
+    /* Open menu on mobile */
+    .head_nav.open {
+        display: block;
+        height: 250px;
+        top: -40px;
+        padding: 40px 0;
+    }
+
+    /* Show Hamburger Menu on Mobile */
+    .menu-icon {
+        display: block;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+}
+@media (min-width: 2000px) {
+
+    .logo{
+        margin-left: 12rem;
+    }
+    .head_nav ul li a {
+        font-size: 16px;
+    }
+    .logo img{
+        width: 180px;
+    }
+    .contact-form {
+        padding: 12rem !important;
+    }
+    .reach-contact-info h2{
+        font-size: 2rem !important;
+    }
+    .reach-contact-info {
+        font-size: 1.3rem !important;
+    }
+    .car_title {
+        font-size: 2rem !important;
+    }
+    .reach-input-box label {
+        font-size: 1.2rem !important;
+        margin-bottom: 10px !important;
+    }
+    .reach-radio-group label{
+        font-size: 16px !important;
+    }
+}

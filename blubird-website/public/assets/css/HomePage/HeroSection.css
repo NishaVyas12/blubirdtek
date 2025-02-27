@@ -1,0 +1,313 @@
+/** {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    color: white;
+    text-align: center;
+    background-color: #121212;
+}
+
+header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.logo {
+    margin-left: 50px;
+}
+
+    .logo img {
+        width: 150px;
+    }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    padding-top: 50px;
+}
+
+.roller {
+    display: inline-block;
+    height: 4rem;
+    overflow: hidden;
+    line-height: 4rem;
+    position: relative;
+}
+
+.roller span {
+    display: block;
+    text-align: left;
+    animation: slide 3s infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(0);
+    }
+
+    33% {
+        transform: translateY(-4rem);
+    }
+
+    66% {
+        transform: translateY(-8rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-mask {
+    display: inline-block;
+    width: 340px;
+    height: 90px;
+    border-radius: 50px;
+    background: url('../../images/gif1.png') no-repeat center center/cover;
+}
+
+.gif-mask {
+    display: inline-block;
+    width: 200px;
+    height: 90px;
+    border-radius: 50px;
+    background: url('../../images/gif2.png') no-repeat center center/cover;
+}
+
+.cta {
+    margin-top: 20px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid white;
+}
+
+.cta:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+*/
+
+/*body {
+    color: white;
+    text-align: center;
+}*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+}
+header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.logo {
+    margin-left: 50px;
+}
+
+    .logo img {
+        width: 150px;
+    }
+
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        padding: 0;
+        margin: 0;
+    }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+            }
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    padding-top: 50px;
+}
+
+#gradient-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    --gradient-color-1: #5183F7;
+    --gradient-color-2: #08247B;
+    --gradient-color-3: #1342AB;
+    --gradient-color-4: #08247B;
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-mask {
+    display: inline-block;
+    width: 340px;
+    height: 90px;
+    border-radius: 50px;
+    vertical-align: middle;
+    background: url('../../images/gif1.png') no-repeat center center/cover;
+}
+
+.gif-mask {
+    display: inline-block;
+    width: 200px;
+    height: 90px;
+    border-radius: 50px;
+    vertical-align: middle;
+    background: url('../../images/gif2.png') no-repeat center center/cover;
+}
+
+.cta {
+    margin-top: 20px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid white;
+}
+
+    .cta:hover {
+        background: rgba(255, 255, 255, 0.4);
+    }
+
+/* New Section (No Canvas Background) */
+.new-section {
+    width: 100%;
+    padding: 100px 20px;
+    background: #121212;
+    color: white;
+    text-align: center;
+}
+
+    .new-section h2 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .new-section p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+.roller {
+    display: inline-block;
+    height: 4rem;
+    overflow: hidden;
+    line-height: 4rem;
+    position: relative;
+}
+
+    .roller span {
+        display: block;
+        text-align: left;
+        animation: slide 3s infinite;
+    }
+
+@keyframes slide {
+    0% {
+        transform: translateY(0);
+    }
+
+    33% {
+        transform: translateY(-4rem);
+    }
+
+    66% {
+        transform: translateY(-8rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

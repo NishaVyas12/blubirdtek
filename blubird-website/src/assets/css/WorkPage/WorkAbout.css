@@ -1,0 +1,75 @@
+.work_desc {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+    color: #FFFFFF;
+    font-family: "Helvetica";
+    font-weight: 400;
+}
+
+.work_left {
+    width: 35%;
+}
+
+.work_right {
+    width: 50%;
+}
+
+.desc_title {
+    font-size: 2rem;
+    margin: 0 0 30px 0;
+    font-family: "NeueHaasDisplayRegular";
+    font-weight: 400;
+}
+
+.desc_right_desc {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.work_info {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.line {
+    border: 1px solid white;
+    margin: 0 0 30px 0;
+}
+
+.work_left_desc {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.work_left_desc li {
+    margin-bottom: 10px;
+}
+
+.desc_right_title {
+    font-size: 1.3rem;
+    margin: 20px 0;
+    font-weight: 400;
+}
+
+.desc_right_scope {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    line-height: 2;
+}
+
+.desc_right_scope p {
+    margin: 5px 0;
+    font-size: 0.8rem;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}

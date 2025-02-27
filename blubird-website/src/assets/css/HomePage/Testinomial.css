@@ -1,0 +1,201 @@
+.testimonial-wrapper {
+    background-color: #00020E;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 7rem 0;
+    flex-direction: column;
+}
+
+.testimonial-heading {
+    font-family: "NeueHaasDisplayRegular";
+    font-weight: normal;
+    word-spacing: 4px;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 11rem;
+}
+
+.testimonial-highlight {
+    color: #2155E6;
+    font-style: italic;
+    font-family: "FeatureDisplay";
+}
+
+.testimonial-container {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1200px;
+}
+
+.testimonial-card {
+    position: absolute;
+    height: 100%;
+    background: url('../../images/testinomial/card.svg') no-repeat center center;
+    background-size: contain;
+    text-align: center;
+    padding: 4rem 4rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-origin: left center;
+    backface-visibility: hidden;
+    filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.3));
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.testimonial-card:nth-child(1) {
+    transform: translateY(0px);
+    bottom: 2px;
+    z-index: 3;
+    width: 80%;
+}
+
+.testimonial-card:nth-child(2) {
+    transform: translateY(0px);
+    bottom: 20px;
+    width: 75%;
+    z-index: 2;
+}
+
+.testimonial-card:nth-child(3) {
+    transform: translateY(0px);
+    bottom: -15px;
+    width: 85%;
+    z-index: 1;
+}
+
+.testimonial-card.active {
+    width: 100%;
+    height: 100%;
+}
+
+.testimonial-stars {
+    color: #2155E6;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.testimonial-designation {
+    font-size: 0.87rem;
+    color: gray;
+}
+
+.testimonial-buttons {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.testimonial-arrow {
+    background: none;
+    border: 1px solid gray;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-arrow:hover {
+    background: white;
+    color: black;
+}
+@media (max-width: 900px){
+    .testimonial-arrow {
+        width: 40px;
+        height: 40px;
+        z-index: 100;
+    }
+    .testimonial-arrow:first-child {
+        left: 40% !important;
+        bottom: -100px;
+    }
+
+    .testimonial-arrow:last-child {
+        right: 40% !important;
+        bottom: -100px;
+    }
+    .testimonial-heading {
+        font-size: 1.6rem;
+        margin-bottom: 8rem;
+    }
+}
+
+@media (max-width: 550px){
+    .testimonial-card{
+        width: 60% !important;
+        background-size: 100% 80%;
+    }
+    .testimonial-stars{
+        margin-bottom: 10px;
+    }
+    .testimonial-card:nth-child(2){
+        width: 55% !important;
+    }
+    .testimonial-card:nth-child(2) .testimonial-text{
+        font-size: 0.88rem;
+        margin-bottom: 10px;
+    }
+    .testimonial-card:nth-child(3){
+        width: 55% !important;
+    }  
+    .testimonial-arrow {
+        width: 40px;
+        height: 40px;
+        z-index: 100;
+    }
+    .testimonial-arrow:first-child {
+        left: 40% !important;
+        bottom: -70px;
+    }
+
+    .testimonial-arrow:last-child {
+        right: 40% !important;
+        bottom: -70px;
+    }
+    .testimonial-heading {
+        font-size: 1.2rem !important;
+        margin-bottom: 5rem;
+    }
+    
+}
+@media (max-width: 900px){
+    .testimonial-heading {
+        font-size: 1.8rem;
+        margin-bottom: 7rem;
+    }
+}
+@media (min-width: 2000px){
+    .testimonial-heading {
+        font-size: 3.5rem;
+        
+    }
+}

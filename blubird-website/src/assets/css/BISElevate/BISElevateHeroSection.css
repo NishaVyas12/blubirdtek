@@ -1,0 +1,84 @@
+/* Hero Section */
+.BISElevate_hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    padding-top: 50px;
+    text-align: center;
+}
+
+#elevate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    --gradient-color-1: #5183F7;
+    --gradient-color-2: #08247B;
+    --gradient-color-3: #1342AB;
+    --gradient-color-4: #08247B;
+    z-index: -1;
+}
+
+.BISElevate_hero h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-family: "Helvetica";
+    font-weight: 400;
+}
+
+.BISElevate_hero-subtitle {
+    font-size: 1.3rem;
+    font-style: italic;
+    font-family: "FeatureDisplay";
+    color: #ffffff;
+    opacity: 0.8;
+}
+/* .roller {
+    font-style: italic;
+    font-family: "FeatureDisplay";
+    font-weight: normal;
+}
+
+
+
+.roller {
+    display: inline-block;
+    height: 3.8rem;
+    overflow: hidden;
+    line-height: 4rem;
+    position: relative;
+}
+
+.roller span {
+    display: block;
+    text-align: left;
+    animation: slide 3s infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(0);
+    }
+
+    33% {
+        transform: translateY(-4rem);
+    }
+
+    66% {
+        transform: translateY(-8rem);
+    }
+
+    100% {
+        transform: translateY(-12rem);
+    }
+} */

@@ -1,0 +1,38 @@
+.workportfolio1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    padding: 1.5rem 4rem;
+    color: #ffffff;
+    font-family: "Helvetica";
+}
+
+
+.workportfolio1_content {
+    flex: 1;
+    max-width: 40%;
+}
+
+.workportfolio1_content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.workportfolio1_content p {
+    font-size: 0.7rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+
+.workportfolio1_image-container {
+    flex: 1;
+    max-width: 50%;
+}
+
+.workportfolio1_image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}

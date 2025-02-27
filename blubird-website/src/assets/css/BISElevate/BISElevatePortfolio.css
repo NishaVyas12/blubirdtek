@@ -1,0 +1,50 @@
+.elevate-portfolio {
+    padding: 0 4rem 4rem 4rem;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.elevate-image-banner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.elevate-image-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.elevate-portfolio-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.elevate-portfolio-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.elevate-extra-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.elevate-extra-image-container img {
+    width: 32%;
+    height: auto;
+    object-fit: contain;
+}

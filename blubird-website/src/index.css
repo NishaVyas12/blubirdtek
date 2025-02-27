@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Helvetica";
+    src: local("Helvetica"), url("./assets/css/fonts/Helvetica.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FeatureDisplay";
+    src: local("FeatureDisplay"), url("./assets/css/fonts/FeatureDisplay.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "NeueHaasDisplay";
+    src: local("NeueHaasDisplayMediu"), url("./assets/css/fonts/NeueHaasDisplayMediu.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "NeueHaasDisplayRegular";
+    src: local("NeueHaasDisplay"), url("./assets/css/fonts/NeueHaasDisplay.ttf") format("truetype");
+}

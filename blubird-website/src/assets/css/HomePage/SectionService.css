@@ -1,0 +1,362 @@
+.section.about {
+    background: url('../../images/bg3.png') no-repeat center center/cover;
+    background-color: #00020E;
+    background-position: 50%, 50%;
+    background-repeat: repeat, repeat;
+    background-size: cover, cover;
+    background-attachment: fixed, fixed;
+    flex-flow: column;
+    display: flex;
+}
+
+.section {
+    z-index: 2;
+    background-color: var(--bg--main);
+    position: relative;
+}
+
+.rail-about, .rail-capabilities {
+    z-index: 2;
+    height: 160vh;
+    position: relative;
+}
+
+.container.white {
+    grid-column-gap: 5em;
+    grid-row-gap: 5em;
+    background: url('../../images/Service/service_bg.png') no-repeat center center/cover;
+    padding-top: 3.61em;
+    padding-bottom: 3.61em;
+    position: sticky;
+    top: 0;
+    border-radius: 10px;
+}
+
+.container {
+    flex-flow: column;
+    justify-content: space-between;
+    padding-left: 4rem;
+    padding-right: 2em;
+    display: flex;
+}
+
+.container.capabilities {
+    background: url('../../images/Service/service_bg.png') no-repeat center center/cover;;
+    height: 85vh;
+    padding-top: 4em;
+    position: sticky;
+    top: 0;
+    transform: scale(.7);
+    border-radius: 10px;
+}
+
+.section-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 50px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    flex: 1;
+    width: 50%;
+}
+
+.text-content h1 {
+    font-family: "Helvetica";
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.text-content p {
+    font-family: "Helvetica";
+    font-size: 1.2rem;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 10px 20px;
+    border: 1px solid #ffffff;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1rem;
+}
+
+
+
+.section-container-reverse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 100px;
+    width: 100%;
+}
+
+.text-content-reverse {
+    flex: 1;
+    width: 60%;
+}
+
+.text-content-reverse h1 {
+    font-family: "Helvetica";
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.text-content-reverse p {
+    font-family: "Helvetica";
+    font-size: 1.2rem;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.container.services {
+    background: url('../../images/Service/service_bg.png') no-repeat center center/cover;;
+    height: 85vh;
+    padding-top: 4em;
+    position: sticky;
+    top: 0;
+    transform: scale(.7);
+    border-radius: 10px;
+}
+
+.container.portfolio {
+    background: url('../../images/Service/service_bg.png') no-repeat center center/cover;;
+    height: 85vh;
+    padding-top: 4em;
+    position: sticky;
+    top: 0;
+    transform: scale(.7);
+    border-radius: 10px;
+}
+
+.container.services{
+    will-change: transform;
+    transition: transform 0.5s ease-in-out;
+}
+
+.container.portfolio {
+    will-change: transform;
+    transition: transform 0.5s ease-in-out;
+}
+
+@media (max-width: 900px) {
+    .container {
+        padding: 1rem;
+        text-align: center;
+    }
+    .section-container,
+    .section-container-reverse{
+        flex-direction: column;
+    }
+    .container.services,
+    .container.portfolio,
+    .container.capabilities{
+        height: auto; 
+    }
+   
+    .rail-about, .rail-capabilities {
+        height: 110vh;
+    }
+    .text-content h1 {
+        font-size: 1.5rem !important;
+    }
+    .text-content p{
+        font-size: 0.8rem !important;
+    }
+    .text-content-reverse h1{
+        margin-top: 20px;
+        font-size: 1.5rem !important;
+    }
+
+    .text-content-reverse p{
+        font-size: 0.8rem !important;
+    }
+
+    .button{
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-size: 0.8rem !important ;
+    }
+}
+
+
+
+@media (min-width: 2000px){
+    .text-content h1, 
+    .text-content-reverse h1{
+        font-size: 5rem;
+    }
+    .text-content p,
+    .text-content-reverse p{
+        font-size: 2rem;
+    }
+    .container.white,
+    .container.portfolio{
+        height: auto;
+    }
+    .button{
+        font-size: 1.5rem;
+        padding: 20px 30px;
+        border-radius: 50px;
+    }
+    .text-content,
+    .text-content-reverse {
+        flex: 0.7;
+        width: 30%;
+    }
+    
+    .image-container {
+        flex: 1.3; 
+        max-width: 1000px !important;
+    }
+    .image-container-reverse {
+        flex: 1.3; 
+        max-width: 1000px !important;
+    }
+    .image-container img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+    .image-container-reverse img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+    .container{
+        padding: 0 12rem;
+    }
+}
+@media (max-width: 1050px) {
+    .text-content h1 {
+        font-size: 1.8rem;
+    }
+    .text-content p{
+        font-size: 1rem;
+    }
+    .text-content-reverse h1{
+        margin-top: 20px;
+        font-size: 1.8rem;
+    }
+
+    .text-content-reverse p{
+        font-size: 1rem;
+    }
+
+    .button{
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-size: 1rem;
+    }
+    .image-container img, 
+    .image-container-reverse img{
+        width: 100%;
+    }
+    .rail-about, .rail-capabilities {
+       
+        height: auto; 
+       
+    }
+}
+
+/* General styles for image and video container */
+.image-container,
+.image-container-reverse {
+    position: relative;
+    flex: 1.5;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* Base Image (Background) */
+.base-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+/* Remove overlay image since the shape is handled in CSS */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: auto;
+    z-index: 3;
+}
+
+/* Video Masking remains intact */
+.video-mask {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    z-index: 5;
+}
+
+/* Masked Video remains unchanged */
+.masked-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+/* Masking Shapes applied directly in CSS */
+.video-mask.shape1 .masked-video {
+    -webkit-mask-image: url('../../images/Service/shape1.svg'); 
+    mask-image: url('../../images/Service/shape1.svg');
+}
+
+.video-mask.shape2 .masked-video {
+    -webkit-mask-image: url('../../images/Service/shape2.svg'); 
+    mask-image: url('../../images/Service/shape2.svg');
+}
+
+.video-mask.shape3 .masked-video {
+    -webkit-mask-image: url('../../images/Service/shape3.svg'); 
+    mask-image: url('../../images/Service/shape3.svg');
+}
+
+.video-mask.shape4 .masked-video {
+    -webkit-mask-image: url('../../images/Service/shape4.svg'); 
+    mask-image: url('../../images/Service/shape4.svg');
+}
+
+/* Ensure mask properties are uniform */
+.video-mask .masked-video {
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+
+
+
+@media(max-width:550px){
+    .video-mask{
+        overflow: visible;
+        left: -1px;
+    }
+}

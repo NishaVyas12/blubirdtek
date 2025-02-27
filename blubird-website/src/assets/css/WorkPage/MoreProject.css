@@ -1,0 +1,52 @@
+.more-projects-section {
+    background-color: black;
+    color: white;
+    padding: 0 4rem 4rem 4rem;
+    font-family: "Helvetica";
+}
+
+.more-projects-title {
+    font-size: 2rem;
+    color: white;
+    text-align: left;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.more-projects-title span {
+    color: #2155E6;
+    font-style: italic;
+    font-family: "FeatureDisplay";
+    font-weight: 400;
+}
+
+.more-projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.more-project {
+    background-color: black;
+    overflow: hidden;
+    text-align: left;
+    width: 100%;
+}
+
+.more-project img {
+    width: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.more-project-info h3 {
+    font-size: 1.3rem;
+    line-height: 3;
+    font-weight: 400;
+}
+
+.more-project-info p {
+    font-size: 0.8rem;
+    color: #f1f1f1;
+    line-height: 1.5;
+}

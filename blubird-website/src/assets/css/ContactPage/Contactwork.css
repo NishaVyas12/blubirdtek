@@ -1,0 +1,133 @@
+.Contact-container {
+    padding: 0 0 4rem 0;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+}
+.contact-content {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+.contact-headline {
+    font-family: "Helvetica";
+    font-size: 2rem;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.italic-text {
+    font-style: italic;
+    color: #007bff; 
+    font-family: "FeatureDisplay";
+}
+
+.contact-description {
+    font-size: 1rem;
+    color: #f1f1f1;
+    margin-top: 10px;
+}
+
+
+.Contact-scroll-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+.Contact-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: nowrap;
+    will-change: transform;
+}
+
+.Contact-grid-item {
+    width: 25vw;
+    min-width: 300px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.Contact-grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.Contact-caption {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    text-align: left;
+    font-family: "Helvetica";
+    color: #ffffff;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .Contact-grid-item {
+        width: 50vw;
+        min-width: 250px;
+    }
+}
+@media (max-width: 1024px) {
+    .contact-headline {
+        font-size: 1.8rem;
+    }
+
+    .contact-description {
+        font-size: 0.9rem;
+    }
+
+    .Contact-grid-item {
+        width: 40vw;
+        min-width: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-headline {
+        font-size: 1.5rem;
+    }
+
+    .contact-description {
+        font-size: 0.85rem;
+    }
+
+    .Contact-grid-item {
+        width: 50vw;
+        min-width: 220px;
+    }
+}
+
+@media (max-width: 550px) {
+    .contact-headline {
+        font-size: 1.2rem;
+    }
+
+    .Contact-container{
+        padding-top: 2rem;
+
+    }
+    .contact-description {
+        font-size: 0.8rem;
+    }
+
+    .Contact-grid-item {
+        width: 65vw;
+        min-width: 200px;
+    }
+}
+@media (min-width:2000px){
+    .contact-headline {
+        font-size: 4rem;
+    }
+    .contact-content {
+        max-width: 1200px;
+    }
+    .contact-description {
+         font-size: 1.5rem;
+    }
+}

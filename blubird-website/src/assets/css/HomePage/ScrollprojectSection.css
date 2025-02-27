@@ -1,0 +1,132 @@
+.scrollproject_section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transition: background 0.5s ease-in-out;
+}
+
+.scrollproject_fixed-heading {
+    position: fixed;
+    top: 70%;
+    left: 5%;
+    font-size: 4rem;
+    color: white;
+    z-index: 10;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.scrollproject_text-overlay {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    z-index: 10;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.scrollproject_text-content p {
+    margin: 5px 0;
+}
+
+.scrollproject_bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scrollproject_date {
+    font-size: 0.9rem;
+}
+
+.scrollproject_btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.scrollproject_hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.scrollproject_active-heading {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.scrollproject_active-overlay {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+@media (max-width: 1050px){
+    .scrollproject_fixed-heading{
+        top: 30%;
+        font-size: 3rem;
+    }
+    .scrollproject_text-overlay{
+        width: 96%;
+        right: 0;
+        bottom: 0;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 900px){
+    .scrollproject_fixed-heading{
+        top: 30%;
+        font-size: 2.5rem;
+    }
+    .scrollproject_text-overlay{
+        width: 95%;
+        right: -5px;
+        bottom: 0;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 550px){
+    .scrollproject_fixed-heading{
+        top: 40%;
+        font-size: 2.5rem;
+    }
+    .scrollproject_text-overlay{
+        width: 95%;
+        right: -15px;
+        bottom: 0;
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 2000px){
+    .scrollproject_fixed-heading{
+        top: 80%;
+        font-size: 6.5rem;
+        left: 8%;
+    }
+    .scrollproject_text-overlay{
+        font-size: 2rem;
+        height: 400px;
+    }
+    .scrollproject_date {
+        font-size: 2rem;
+    }
+}
