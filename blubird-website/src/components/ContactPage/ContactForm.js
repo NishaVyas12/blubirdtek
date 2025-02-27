@@ -24,11 +24,11 @@ const ContactForm = () => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
-
+  const API_BASE_URL = process.env.REACT_APP_BACKEND_URL;
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/api/contact", formData);
+      const response = await axios.post(`${API_BASE_URL}/contact`, formData);
       if (response.status === 200) {
         toast.success("Your message has been sent successfully!", { position: "top-right", autoClose: 3000 });
         setFormData({
