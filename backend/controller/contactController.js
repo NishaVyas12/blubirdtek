@@ -17,7 +17,7 @@ const contactdata = async (req, res) => {
 
         let mailOptions = {
             from: `"BluBird Contact Form" <developer1@blubirdtek.com>`,
-            to: "dev.backend@blubirdtek.com",
+            to: "hello@blubirdtek.com",
             subject: `New Contact from ${firstName} ${lastName}`,
             html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; border: 1px solid #ddd; border-radius: 10px; padding: 20px; background-color: #f9f9f9;">
