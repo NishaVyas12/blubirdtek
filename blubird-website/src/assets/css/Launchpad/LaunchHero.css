@@ -1,0 +1,403 @@
+.new-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+}
+  
+.new-nav-logo {
+   height: 30px; 
+   cursor: pointer;
+}
+
+.new-menu-icon {
+   font-size: 24px;
+   cursor: pointer;
+   margin-left: auto;
+}
+
+.launch_hero_homepage-container {
+    position: relative;
+    min-height: 80vh;
+    background: linear-gradient(180deg, #0a1b3d 0%, #1e3a8a 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 4rem 0 4rem;
+    overflow: hidden;
+    font-family: "Helvetica";
+  }
+  
+  .launch_hero_homepage-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+  }
+  
+  .launch_hero_homepage-text {
+    color: white;
+    max-width: 50%;
+    overflow: hidden;
+  }
+  
+  .launch_desc {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+  
+  .launch_hero_homepage-text h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+  }
+  
+  .launch_hero_homepage-text p {
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+  
+    .launch_hero_homepage-logos {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: max-content;
+        animation: scroll 20s linear infinite; 
+        white-space: nowrap; 
+    }
+
+    .launch_hero_homepage-logo {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%); 
+        }
+    }
+
+
+  
+  .launch_hero_homepage-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .launch_hero_homepage-service-btn {
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 0.6rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    font-family: "Helvetica";
+  }
+  
+  .launch_hero_homepage-service-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+  }
+  
+  .launch_hero_homepage-image-container {
+    position: relative;
+    width: 450px;
+    height: 450px;
+  }
+  
+  .launch_hero_homepage-person-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  
+@media (max-width: 575.98px) {
+    .new-header-container {
+        padding: 0 1rem;
+    }
+
+    .new-menu-icon{
+        right: 1rem;
+    }
+
+    .new-nav-logo {
+        height: 20px; 
+        
+     }
+
+    .launch_hero_homepage-container {
+        padding: 6rem 1rem 2rem 1rem;
+        min-height: auto;
+    }
+
+    .launch_hero_homepage-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .launch_hero_homepage-text {
+        max-width: 100%;
+    }
+
+    .launch_hero_homepage-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .launch_hero_homepage-text p {
+        font-size: 0.7rem;
+    }
+
+    .launch_hero_homepage-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .launch_hero_homepage-service-btn {
+        padding: 8px 15px;
+        font-size: 0.55rem;
+    }
+
+    .launch_hero_homepage-image-container {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Small Devices (phones, 576px - 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .new-header-container {
+        padding: 0 2rem;
+    }
+
+
+    .launch_hero_homepage-container {
+        padding: 6rem 2rem 2rem 2rem;
+    }
+
+    .launch_hero_homepage-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .launch_hero_homepage-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .launch_hero_homepage-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .launch_hero_homepage-logos {
+        justify-content: center;
+    }
+
+    .launch_hero_homepage-image-container {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .new-header-container {
+        padding: 0 3rem;
+    }
+
+    .new-menu-icon {
+        display: block;
+    }
+
+    .launch_hero_homepage-container {
+        padding: 6rem 3rem 2rem 3rem;
+    }
+
+    .launch_hero_homepage-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .launch_hero_homepage-text {
+        max-width: 100%;
+    }
+
+    .launch_hero_homepage-text h1 {
+        font-size: 1.9rem;
+    }
+
+    .launch_hero_homepage-image-container {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .new-header-container {
+        padding: 0 3rem;
+    }
+
+    .launch_hero_homepage-container {
+        padding: 7rem 3rem 0 3rem;
+    }
+
+    .launch_hero_homepage-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .launch_hero_homepage-image-container {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (min-width: 2000px) {
+    .new-header-container {
+        padding: 0 12rem; 
+    }
+
+    .new-menu-icon{
+        right: 12rem;
+        font-size: 35px;
+    }
+
+    .new-nav-logo {
+        height: 50px; 
+    }
+
+    .launch_hero_homepage-container {
+        padding: 6rem 12rem 0 12rem; 
+        min-height: 90vh; 
+    }
+
+    .launch_hero_homepage-text {
+        max-width: 55%; 
+    }
+
+    .launch_desc {
+        font-size: 1.2rem; 
+    }
+
+    .launch_hero_homepage-text h1 {
+        font-size: 3.5rem; 
+        margin-bottom: 25px;
+    }
+
+    .launch_hero_homepage-text p {
+        font-size: 1.5rem; 
+        line-height: 1.8;
+    }
+
+    .launch_hero_homepage-logos {
+        gap: 20px; 
+    }
+
+    .launch_hero_homepage-logo {
+        width: 80px; 
+        height: 80px;
+    }
+
+    .launch_hero_homepage-services {
+        gap: 15px; 
+    }
+
+    .launch_hero_homepage-service-btn {
+        padding: 20px 35px;
+        font-size: 1.2rem;
+        border-radius: 30px;
+    }
+
+    .launch_hero_homepage-image-container {
+        width: 700px; 
+        height: 700px;
+    }
+
+    .launch_hero_homepage-person-image {
+        border-radius: 20px;
+    }
+}
+@media (max-width: 399.98px) {
+    .new-header-container {
+        padding: 0 0.5rem; 
+    }
+
+    .new-nav-logo {
+        height: 25px; 
+    }
+
+    .new-menu-icon {
+        display: block;
+        font-size: 20px; 
+        right: 1rem;
+    }
+
+    .launch_hero_homepage-container {
+        padding: 5rem 0.5rem 1rem 0.5rem; 
+        min-height: auto; 
+    }
+
+    .launch_hero_homepage-content {
+        flex-direction: column;
+        gap: 20px; 
+    }
+
+    .launch_hero_homepage-text {
+        max-width: 100%;
+        
+    }
+
+    .launch_desc {
+        font-size: 0.65rem; 
+        margin-bottom: 8px;
+    }
+
+    .launch_hero_homepage-text h1 {
+        font-size: 1.2rem; 
+        margin-bottom: 10px;
+    }
+
+    .launch_hero_homepage-text p {
+        font-size: 0.6rem; 
+        line-height: 1.6;
+    }
+
+    .launch_hero_homepage-logos {
+        gap: 8px; 
+        margin-bottom: 15px;
+    }
+
+    .launch_hero_homepage-logo {
+        width: 50px; 
+        height: 50px;
+    }
+
+    .launch_hero_homepage-services {
+        gap: 8px; 
+    }
+
+    .launch_hero_homepage-service-btn {
+        padding: 6px 12px; 
+        font-size: 0.45rem; 
+        border-radius: 15px; 
+    }
+
+    .launch_hero_homepage-image-container {
+        width: 100%;
+        height: 200px; 
+    }
+
+    .launch_hero_homepage-person-image {
+        border-radius: 10px; 
+    }
+}

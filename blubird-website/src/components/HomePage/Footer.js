@@ -1,27 +1,65 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../assets/css/HomePage/FooterSection.css";
 
+const textLines = [
+    "OUTSMART,",
+    "OUTSHINE, OUTPERFORM.",
+    "EVERY TIME."
+];
+
 const Footer = () => {
+    const [displayedText, setDisplayedText] = useState(["", "", ""]);
+    const [charIndex, setCharIndex] = useState(0);
+    const [isErasing, setIsErasing] = useState(false);
+
+    useEffect(() => {
+        let typingSpeed = isErasing ? 50 : 100;
+        let timeout;
+
+        // Join all lines into a single string for smooth typing
+        const fullText = textLines.join("\n");
+
+        if (!isErasing && charIndex <= fullText.length) {
+            timeout = setTimeout(() => {
+                setDisplayedText([
+                    fullText.slice(0, charIndex).split("\n")[0] || "",
+                    fullText.slice(0, charIndex).split("\n")[1] || "",
+                    fullText.slice(0, charIndex).split("\n")[2] || ""
+                ]);
+                setCharIndex(charIndex + 1);
+            }, typingSpeed);
+        } else if (!isErasing) {
+            timeout = setTimeout(() => setIsErasing(true), 5000); 
+        } else if (isErasing && charIndex > 0) {
+            timeout = setTimeout(() => {
+                setDisplayedText([
+                    fullText.slice(0, charIndex - 1).split("\n")[0] || "",
+                    fullText.slice(0, charIndex - 1).split("\n")[1] || "",
+                    fullText.slice(0, charIndex - 1).split("\n")[2] || ""
+                ]);
+                setCharIndex(charIndex - 1);
+            }, typingSpeed);
+        } else {
+            timeout = setTimeout(() => {
+                setIsErasing(false);
+                setCharIndex(0);
+            }, 1000); 
+        }
+
+        return () => clearTimeout(timeout);
+    }, [charIndex, isErasing]);
+
     return (
         <div className="footer-section">  
-            <div className="footer-hero">
-                <h1>LET'S <br /> 
-                    <span className="footer-parentheses">(</span>
-                    <div className="footer-roller">
-                        <span>Work</span>
-                        <span>Build</span>
-                        <span>Shape</span>
-                        <span>Work</span>
-                        <span>Build</span>
-                        <span>Shape</span>  
-                    </div>
-                    <span className="footer-parentheses">)</span>
-                    <br /> TOGETHER
+            <div className="footer-hero updated-hero">
+                <h1 className="footer-heading">
+                    {displayedText[0]} <br />
+                    {displayedText[1]} <br />
+                    <span className="footer-highlight">{displayedText[2]}</span>
                 </h1>
                 <a href="mailto:hello@blubirdtek.com" className="email-button">hello@blubirdtek.com</a>
             </div>
             
-            {/* New footer section similar to the screenshot */}
             <footer className="footer-bottom">
                 <div className="footer-left">
                     <p className="tagline">Do it once. Do it right.</p>

@@ -1,37 +1,15 @@
 ﻿import React, { useEffect } from "react";
 import "../../assets/css/HomePage/SectionService.css";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger"; 
 import grid from "../../assets/images/Service/grid.png";
 import crm from "../../assets/images/Service/crm.mp4";
-import shape1 from "../../assets/images/Service/shape1.svg";
 import video2 from "../../assets/images/Service/video2.mp4";
-import shape2 from "../../assets/images/Service/shape2.svg";
 import video3 from "../../assets/images/Service/video3.mp4";
-import shape3 from "../../assets/images/Service/shape3.svg";
-import video4 from "../../assets/images/Service/video4.mp4";
-import shape4 from "../../assets/images/Service/shape4.png";
-
-
-
-// Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const ServiceSection = () => {
     useEffect(() => {
-        // Dynamically add GSAP CDN scripts
-        const addScript = (src) => {
-            const script = document.createElement("script");
-            script.src = src;
-            script.async = true;
-            document.body.appendChild(script);
-            return script;
-        };
-
-        const gsapScript = addScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js");
-        const scrollTriggerScript = addScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js");
-
-        // GSAP Animations (Run after scripts load)
         const animate = () => {
             if (window.innerWidth > 440) {
                 gsap.to(".container.white", {
@@ -44,35 +22,23 @@ const ServiceSection = () => {
                         scrub: true,
                     },
                 });
-                if (window.innerWidth > 440) {
-                    gsap.to(".container.services", {
-                        scale: 0.7,
-                        ease: "power1.out",
-                        scrollTrigger: {
-                            trigger: ".rail-services",
-                            start: "top 0%",
-                            end: "bottom 100%",
-                            scrub: true,
-                        },
-                    });
-                }
-                if (window.innerWidth > 440) {
-                    gsap.to(".container.portfolio", {
-                        scale: 0.7,
-                        ease: "power1.out",
-                        scrollTrigger: {
-                            trigger: ".rail-portfolio",
-                            start: "top 0%",
-                            end: "bottom 100%",
-                            scrub: true,
-                        },
-                    });
-                }
-                gsap.to(".container.capabilities", {
+
+                gsap.to(".container.services", {
+                    scale: 0.7,
+                    ease: "power1.out",
+                    scrollTrigger: {
+                        trigger: ".rail-services",
+                        start: "top 0%",
+                        end: "bottom 100%",
+                        scrub: true,
+                    },
+                });
+
+                gsap.to(".container.portfolio", {
                     scale: 1,
                     ease: "power1.out",
                     scrollTrigger: {
-                        trigger: ".rail-capabilities",
+                        trigger: ".rail-portfolio",
                         start: "top 0%",
                         end: "bottom 110%",
                         scrub: true,
@@ -91,29 +57,53 @@ const ServiceSection = () => {
             }
         };
 
-        // Wait until GSAP is loaded before running animations
-        gsapScript.onload = () => {
-            scrollTriggerScript.onload = animate;
-        };
-
-        // Cleanup: Remove scripts when component unmounts
+        animate();
         return () => {
-            document.body.removeChild(gsapScript);
-            document.body.removeChild(scrollTriggerScript);
+            ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
         };
     }, []);
 
-    return (
-       // React Code
+const handleNavigation = (url) => {
+    window.location.href = url; 
+};
+
+return (
 <div id="about" className="section about">
     <div className="rail-about">
         <div className="container white">
             <div className="about-content-container">
                 <div className="section-container">
-                    <div className="text-content">
+                <div className="text-content">
                         <h1>Launchpad</h1>
-                        <p>Empowering businesses to launch and sale their products and services digitally.</p>
+                        <p>Start strong with BIS Launchpad. We help you build, scale, and dominate the digital
+                        space. We'll get you online, optimized, and ready to grow.</p>
+                        {/* <a href="/launchpad" className="button" onClick={() => handleNavigation("/launchpad")}>Know More →</a> */}
                         <a href="#" className="button">Know More →</a>
+                        <div className="logos-container">
+                            <div className="logos-marquee">
+                                <span className="logo">ogogipsum</span>
+                                <span className="logo"><img src="path-to-logo1.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo"><img src="path-to-logo2.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo"><img src="path-to-logo3.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo">|</span>
+                               
+                                <span className="logo">ogogipsum</span>
+                                <span className="logo"><img src="path-to-logo1.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo"><img src="path-to-logo2.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo"><img src="path-to-logo3.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo">|</span>
+                            </div>
+                        </div>
+                        <div className="buttons-container">
+                            <button className="service-button">Marketplace Management (B2B and B2C)</button>
+                            <button className="service-button">Website Development</button>
+                            <button className="service-button">UI/UX</button>
+                            <button className="service-button">Global Marketplaces</button>
+                            <button className="service-button">Global Marketplace Performance Ads</button>
+                            <button className="service-button">Dropship Listing & Management</button>
+                            <button className="service-button">Amazon Brand Store</button>
+                            <button className="service-button">Web Page Ideation</button>
+                        </div>
                     </div>
                     <div className="image-container">
                         <img src={grid} alt="Base Image" className="base-image" />
@@ -142,8 +132,33 @@ const ServiceSection = () => {
                 </div>
                 <div className="text-content-reverse">
                     <h1>Elevate</h1>
-                    <p>Elevating your brand and digital strategy to captivate audiences and amplify your market impact.</p>
+                    <p>Stand out in the crowded digital world. Our branding, storytelling, and creative content
+                    strategies are designed to capture attention and make your brand unforgettable.</p>
                     <a href="#" className="button">Know More →</a>
+                    <div className="logos-container">
+                            <div className="logos-marquee">
+                                <span className="logo">ogogipsum</span>
+                                <span className="logo"><img src="path-to-logo1.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo"><img src="path-to-logo2.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo"><img src="path-to-logo3.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo">|</span>
+                               
+                                <span className="logo">ogogipsum</span>
+                                <span className="logo"><img src="path-to-logo1.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo"><img src="path-to-logo2.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo"><img src="path-to-logo3.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo">|</span>
+                            </div>
+                        </div>
+                        <div className="buttons-container">
+                            <button className="service-button">Brand Strategy</button>
+                            <button className="service-button">Brand Identity Creation</button>
+                            <button className="service-button">PR and Communication</button>
+                            <button className="service-button">Content Creation</button>
+                            <button className="service-button">Packaging and brand collaterals</button>
+                            <button className="service-button">Influencer Marketing</button>
+                            
+                        </div>
                 </div>
             </div>
         </div>
@@ -153,9 +168,34 @@ const ServiceSection = () => {
             <div className="about-content-container">
                 <div className="section-container">
                     <div className="text-content">
-                        <h1>Synergy</h1>
-                        <p>Integrate CRM, automation, and customer experience for stronger relationships and better results.</p>
+                        <h1>Performance</h1>
+                        <p>Fuel your growth with precision marketing. Our marketing wizards uses analytics, PPC
+                        optimization, and SEO strategies to convert clicks into customers and drive ROI.</p>
                         <a href="#" className="button">Know More →</a>
+                        <div className="logos-container">
+                            <div className="logos-marquee">
+                                <span className="logo">ogogipsum</span>
+                                <span className="logo"><img src="path-to-logo1.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo"><img src="path-to-logo2.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo"><img src="path-to-logo3.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo">|</span>
+                               
+                                <span className="logo">ogogipsum</span>
+                                <span className="logo"><img src="path-to-logo1.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo"><img src="path-to-logo2.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo"><img src="path-to-logo3.png" alt="Logoipsum" className="logo-icon" /> Logoipsum</span>
+                                <span className="logo">|</span>
+                            </div>
+                        </div>
+                        <div className="buttons-container">
+                            <button className="service-button">Monthly Search Engine Optimization Package</button>
+                            <button className="service-button">Performance Marketing</button>
+                            <button className="service-button">Content Marketing</button>
+                            <button className="service-button">Social media marketing</button>
+                            <button className="service-button">Marketing Metrics</button>
+                            <button className="service-button">Personal Branding</button>
+                            
+                        </div>
                     </div>
                     <div className="image-container">
                         <img src={grid} alt="Base Image" className="base-image" />
@@ -166,26 +206,6 @@ const ServiceSection = () => {
                             </video>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div className="rail-capabilities">
-        <div id="Capabilities" className="container capabilities">
-            <div className="section-container-reverse">
-                <div className="image-container-reverse">
-                    <img src={grid} alt="Base Image" className="base-image" />
-                    <div className="video-mask shape4">
-                        <video autoPlay muted loop className="masked-video">
-                            <source src={video4} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-                <div className="text-content-reverse">
-                    <h1>Performance</h1>
-                    <p>Optimize campaigns with data insights, performance tracking, and SEO that deliver measurable results.</p>
-                    <a href="#" className="button">Know More →</a>
                 </div>
             </div>
         </div>

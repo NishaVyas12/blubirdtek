@@ -1,7 +1,7 @@
 .scrollproject_section {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     background-size: cover;
     background-position: center;
     transition: background 0.5s ease-in-out;
@@ -50,16 +50,11 @@
     align-items: center;
 }
 
-.scrollproject_date {
-    font-size: 0.9rem;
-}
-
 .scrollproject_btn {
     display: inline-block;
     padding: 10px 20px;
     border: 1px solid #ffffff;
     text-decoration: none;
-    font-weight: bold;
     border-radius: 20px;
     color: #ffffff;
 }
@@ -90,6 +85,9 @@
         bottom: 0;
         font-size: 1rem;
     }
+    .projectsection_gallery {
+        height: 160vh;
+    }
 }
 @media (max-width: 900px){
     .scrollproject_fixed-heading{
@@ -106,13 +104,15 @@
 @media (max-width: 550px){
     .scrollproject_fixed-heading{
         top: 40%;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .scrollproject_text-overlay{
         width: 95%;
         right: -15px;
         bottom: 0;
         font-size: 0.8rem;
+        line-height: 1.5;
+        height:180px;
     }
 }
 

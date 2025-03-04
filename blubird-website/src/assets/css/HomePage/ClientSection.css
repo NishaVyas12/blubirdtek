@@ -28,7 +28,7 @@
 
 .client {
     background-color: #111;
-    padding: 25px;
+    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,6 +51,9 @@
     .clients-section h2 {
         font-size: 1.8rem;
     }
+    .bragging-title {
+        font-size: 2.7rem;
+    }
 }
 
 @media (max-width: 900px) {
@@ -58,26 +61,51 @@
         grid-template-columns: repeat(2, 1fr);
     }
     .client img {
-        max-width: 80%;
-        max-height: 20px;
+        max-width: 100%;
+        max-height: 30px;
         
     }
     .clients-section h2 {
         font-size: 1.6rem;
+    }
+    .bragging-title {
+        font-size: 2.5rem;
+        word-spacing: 40px;
+        line-height: 1.5;
+        
     }
 }
 
 @media (max-width: 550px) {
     .clients-grid {
         grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 1rem;
     }
     .client img {
-        max-width: 70%;
-        max-height: 20px;
+        max-width: 100%;
+        max-height: 30px;
         
     }
     .clients-section h2 {
-        font-size: 1.2rem;
+        font-size: 1.2rem !important;
+    }
+    .bragging-title {
+        font-size: 1.2rem !important; 
+        font-weight: 700 !important;
+        gap: 4px !important;
+        margin-bottom: 30px !important; 
+        flex-wrap: wrap; 
+        justify-content: center;
+        line-height: 1.2;
+    }
+    .count-word {
+        min-width: auto !important; 
+        text-align: center;
+        font-weight: normal;
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    }
+    .count-word:not(:last-child) {
+        margin-right: 5px !important; 
     }
 }
 @media (min-width: 2000px) {
@@ -86,5 +114,104 @@
     }
     .clients-section h2 {
         font-size: 3.5rem;
+    }
+    .bragging-title {
+        font-size: 7.5rem !important;
+        margin-bottom: 100px !important;
+    }
+}
+
+.bragging-title {
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #2155E6;
+    margin-bottom: 60px;
+    text-align: center;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+.count-word {
+    display: inline-block;
+    min-width: 120px;
+    text-align: center;
+    font-weight: normal;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.count-word:not(:last-child) {
+    margin-right: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .clients-section {
+        padding-top: 3rem; 
+    }
+
+    .clients-section h2 {
+        font-size: 1.8rem; 
+        word-spacing: 3px; 
+    }
+
+    .clients-grid {
+        grid-template-columns: repeat(3, 1fr); 
+        padding: 3rem 2rem; 
+    }
+
+    .client {
+        padding: 20px; 
+    }
+
+    .client img {
+        max-width: 80%; 
+        max-height: 35px; 
+    }
+
+    .bragging-title {
+        font-size: 2.5rem; 
+        gap: 60px;
+        margin-bottom: 50px; 
+    }
+
+    .count-word {
+        min-width: 100px; 
+    }
+
+    .count-word:not(:last-child) {
+        margin-right: 15px;
+    }
+}
+
+
+@media (max-width: 1050px) {
+    .clients-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .clients-section h2 {
+        font-size: 1.8rem;
+    }
+    .bragging-title {
+        font-size: 2.7rem;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .client img {
+        max-width: 100%;
+        max-height: 30px;
+    }
+    .clients-section h2 {
+        font-size: 1.6rem;
+    }
+    .bragging-title {
+        font-size: 2rem;
+        word-spacing: 40px;
+        line-height: 1.5;
     }
 }

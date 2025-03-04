@@ -6,8 +6,7 @@ const BirdSection = () => {
     return (
         <section className="bird">
             <h2>
-            Great things happen when you take flight. <br />At BIS, we embrace bold risks, soar above the competition,
-            <br /> and prove that innovation leads to success.
+            Why be a lone sparrow when<br /> you can flock with BluBird? Together, we'll navigate<br /> the currents of the market.
             </h2>
             <div className="wire-container">
                 <img src={birdImage} className="birds" alt="Birds on a Wire" />

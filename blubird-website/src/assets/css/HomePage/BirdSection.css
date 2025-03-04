@@ -13,7 +13,7 @@
     font-size: 2rem;
     margin-bottom: 40px;
     line-height: 1.6;
-    font-family: "NeueHaasDisplayRegular";
+    font-family: "Helvetica";
     font-weight: normal;
 }
 
@@ -90,9 +90,9 @@
 
 @media (max-width: 550px) {
     .bird h2 {
-        font-size: 0.9rem;
-        line-height: 1.6;
-        margin-top: 20px;
+        font-size: 0.8rem;
+        line-height: 1.8;
+        margin-top: 40px;
     }
 
     .bottom-text {

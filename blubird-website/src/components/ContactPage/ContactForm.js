@@ -28,7 +28,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${API_BASE_URL}/contact`, formData);
+      const response = await axios.post(`${API_BASE_URL}/api/contact`, formData);
       if (response.status === 200) {
         toast.success("Your message has been sent successfully!", { position: "top-right", autoClose: 3000 });
         setFormData({

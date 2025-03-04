@@ -4,25 +4,32 @@
     justify-content: center;
     align-items: center;
     height: 75vh;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
     color: white;
+    background-color: #0A0D20;
 }
 
-.footer-hero h1 {
-    font-size: 5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: 2px;
+.footer-heading {
+    font-size: 3.5rem;
+    line-height: 1.5;
     text-transform: uppercase;
-    font-family: "NeueHaasDisplay";
+    font-family: "Helvetica";
     font-weight: normal;
+    white-space: pre-line; 
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.footer-highlight {
+    color: #3665E8; 
 }
 
-.footer-italic {
-    font-style: italic;
-    font-family: "FeatureDisplay";
-    font-weight: 400;
+@keyframes swing {
+    0%, 85% { transform: rotateZ(0deg); }
+    90% { transform: rotateZ(-10deg); }  
+    95% { transform: rotateZ(10deg); }  
+    100% { transform: rotateZ(0deg); }   
 }
 
 .email-button {
@@ -36,6 +43,10 @@
     position: relative;
     background: transparent;
     border: none;
+    transition: transform 0.5s ease-in-out;
+    animation: swing 5s infinite ease-in-out;
+    transform-origin: center top; /* Ensures smooth swinging */
+    
 }
 
 .email-button::before {
@@ -52,80 +63,10 @@
     mask-composite: exclude;
 }
 
-footer {
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 0.87rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.footer-content {
-    display: flex;
-    gap: 60px; 
-    flex-wrap: wrap;
-    justify-content: center;
-    font-family: "Helvetica";
-    letter-spacing: 1.2px;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer-section {
-    position: relative; 
-    overflow: hidden;
-}
-
-.footer-roller {
-    display: inline-block;
-    height: 4rem;
-    overflow: hidden;
-    line-height: 4rem;
-    position: relative;
-    font-style: italic;
-    font-family: "FeatureDisplay";
-    font-weight: normal;
-    color: #2155E6;
-}
-
-.footer-roller span {
-    display: block;
-    animation: slide 4s infinite;
-}
-
-@keyframes slide {
-    0% {
-        transform: translateY(0);
-    }
-
-    33% {
-        transform: translateY(-4rem);
-    }
-
-    66% {
-        transform: translateY(-8rem);
-    }
-
-    100% {
-        transform: translateY(-12rem);
-    }
-}
-.footer-parentheses {
-    font-family: "FeatureDisplay", sans-serif;
-    font-style: italic;
-    color: #2155E6;
-}
 
 .footer-bottom {
     display: flex;
-    width: 91.6%;
+    width: 89.8%;
     justify-content: space-between;
     align-items: flex-start;
     padding: 4rem;
@@ -136,7 +77,6 @@ footer a {
     gap: 50px;
 }
 
-/* Left Section */
 .footer-left {
     max-width: 40%;
     min-width: 300px;
@@ -274,7 +214,7 @@ footer a {
 
 @media (min-width: 2000px) {
    .footer-bottom{
-    width: 100%;
+   width: 85%;
     padding: 5rem 12rem;
    }
    .footer-hero h1{
@@ -285,6 +225,9 @@ footer a {
     height: 7rem;
     line-height: 7rem;
     
+}
+.email-button {
+    font-size: 1.8rem;
 }
 .tagline{
     font-size: 4rem;
@@ -315,9 +258,10 @@ padding: 15px 12rem;
 }
 
 /* Responsive Fixes */
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
     .footer-bottom {
         padding: 3rem;
+        width: 90.6%;
     }
     .footer-left,
     .footer-right {
@@ -357,10 +301,10 @@ padding: 15px 12rem;
         
     }
 }
-/* Responsive Fixes for Footer Hero */
+
 @media (max-width: 768px) {
     .footer-hero h1 {
-        font-size: 3rem; /* Reduce font size */
+        font-size: 3rem; 
         line-height: 1.1;
     }
 }
@@ -368,14 +312,14 @@ padding: 15px 12rem;
 @media (max-width: 550px) {
     .footer-hero {
         height: auto;
-        padding: 40px 20px;
+        padding: 40px 10px;
     }
     .footer-hero h1 {
-        font-size: 3.5rem;
+        font-size: 1.9rem;
         line-height: 1.5;
     }
     .email-button {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         padding: 10px 20px;
     }
 }

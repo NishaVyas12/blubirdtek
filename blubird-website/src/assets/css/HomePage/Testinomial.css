@@ -11,10 +11,9 @@
 .testimonial-heading {
     font-family: "NeueHaasDisplayRegular";
     font-weight: normal;
-    word-spacing: 4px;
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 11rem;
+    margin-bottom: 6rem;
 }
 
 .testimonial-highlight {
@@ -25,8 +24,8 @@
 
 .testimonial-container {
     position: relative;
-    width: 600px;
-    height: 300px;
+    width: 700px;
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,40 +35,18 @@
 .testimonial-card {
     position: absolute;
     height: 100%;
-    background: url('../../images/testinomial/card.svg') no-repeat center center;
-    background-size: contain;
-    text-align: center;
-    padding: 4rem 4rem 2rem 4rem;
+    background-color: #0A0D20; 
+    border-radius: 10px;
+    text-align: left;
+    padding: 2rem 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     transform-origin: left center;
     backface-visibility: hidden;
-    filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.3));
     overflow: hidden;
-    word-wrap: break-word;
-}
-
-.testimonial-card:nth-child(1) {
-    transform: translateY(0px);
-    bottom: 2px;
-    z-index: 3;
-    width: 80%;
-}
-
-.testimonial-card:nth-child(2) {
-    transform: translateY(0px);
-    bottom: 20px;
-    width: 75%;
-    z-index: 2;
-}
-
-.testimonial-card:nth-child(3) {
-    transform: translateY(0px);
-    bottom: -15px;
-    width: 85%;
-    z-index: 1;
+    word-wrap: break-word; 
 }
 
 .testimonial-card.active {
@@ -77,22 +54,138 @@
     height: 100%;
 }
 
+.testimonial-card-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative; 
+}
+
+.card-1 .testimonial-flag-top-left {
+    width: 250px;
+    height: 200px;
+    background: url('../../images/testinomial/top_flag.png') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    top: -50px;
+    left: 0;
+}
+
+.card-1 .testimonial-logo-top-right {
+    width: 140px;
+    height: 70px; 
+    background: url('../../images/testinomial/top_logo.png') no-repeat center center; 
+    background-size: contain;
+    position: absolute;
+    top: 20px; 
+    right: 4rem; 
+}
+
+.card-1 .testimonial-flag {
+    width: 40px;
+    height: 40px; 
+    background: url('../../images/testinomial/american_flag.png') no-repeat center center; 
+    background-size: contain;
+    margin-bottom: 1rem; 
+}
+
+.card-2 .testimonial-flag-top-left {
+    width: 250px;
+    height: 200px;
+    background: url('../../images/testinomial/top_flag.png') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    top: -50px;
+    left: 0;
+}
+
+.card-2 .testimonial-logo-top-right {
+    width: 140px;
+    height: 70px; 
+    background: url('../../images/testinomial/top_logo.png') no-repeat center center; 
+    background-size: contain;
+    position: absolute;
+    top: 20px; 
+    right: 4rem; 
+}
+
+.card-2 .testimonial-flag {
+    width: 40px;
+    height: 40px; 
+    background: url('../../images/testinomial/american_flag.png') no-repeat center center; 
+    background-size: contain;
+    margin-bottom: 1rem; 
+}
+
+/* Flag and Logo for Card 3 */
+.card-3 .testimonial-flag-top-left {
+    width: 250px;
+    height: 200px;
+    background: url('../../images/testinomial/top_flag.png') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    top: -50px;
+    left: 0;
+}
+
+.card-3 .testimonial-logo-top-right {
+    width: 140px;
+    height: 70px; 
+    background: url('../../images/testinomial/top_logo.png') no-repeat center center; 
+    background-size: contain;
+    position: absolute;
+    top: 20px; 
+    right: 4rem; 
+}
+
+.card-3 .testimonial-flag {
+    width: 40px;
+    height: 40px; 
+    background: url('../../images/testinomial/american_flag.png') no-repeat center center; 
+    background-size: contain;
+    margin-bottom: 1rem; 
+}
+
+.testimonial-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 70px;
+}
+
+.testimonial-flag-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2rem; 
+}
+
+.testimonial-content-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+}
+
 .testimonial-stars {
     color: #2155E6;
     font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.testimonial-text {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 30px;
+    margin-bottom: 1rem; 
 }
 
 .testimonial-author {
     font-weight: bold;
     font-size: 1rem;
-    margin-bottom: 10px;
+    margin: 0; 
+}
+
+.testimonial-text {
+    font-size: 0.8rem;
+    line-height: 2.5;
+    margin-top: 0;
+    color: #ffffff; 
+    text-decoration: underline;
+    text-underline-offset: 10px; 
 }
 
 .testimonial-designation {
@@ -149,43 +242,168 @@
     }
 }
 
-@media (max-width: 550px){
-    .testimonial-card{
-        width: 60% !important;
-        background-size: 100% 80%;
+@media (max-width: 550px) {
+    .testimonial-wrapper {
+        padding: 0 1rem 5rem 1rem;
     }
-    .testimonial-stars{
-        margin-bottom: 10px;
+
+    .testimonial-container {
+        width: 85%; 
+        height: 300px; 
     }
-    .testimonial-card:nth-child(2){
-        width: 55% !important;
+
+    .testimonial-card {
+        width: 100% !important; 
+        padding: 1.5rem 2rem; 
+        background-size: cover; 
     }
-    .testimonial-card:nth-child(2) .testimonial-text{
-        font-size: 0.88rem;
-        margin-bottom: 10px;
+
+    .testimonial-stars {
+        font-size: 1.2rem; 
+        margin-bottom: 8px; 
     }
-    .testimonial-card:nth-child(3){
-        width: 55% !important;
-    }  
+
+    .testimonial-author {
+        font-size: 0.8rem; 
+    }
+
+    .testimonial-text {
+        font-size: 0.6rem; 
+        line-height: 2.5; 
+        margin-top: 5px; 
+    }
+
     .testimonial-arrow {
         width: 40px;
         height: 40px;
         z-index: 100;
     }
+
     .testimonial-arrow:first-child {
-        left: 40% !important;
-        bottom: -70px;
+        left: 30% !important; 
+        bottom: -80px; 
     }
 
     .testimonial-arrow:last-child {
-        right: 40% !important;
-        bottom: -70px;
+        right: 30% !important; 
+        bottom: -80px; 
     }
+
     .testimonial-heading {
-        font-size: 1.2rem !important;
-        margin-bottom: 5rem;
+        font-size: 1.2rem !important; 
+        margin-bottom: 4rem !important; 
     }
+
     
+    .card-1 .testimonial-flag-top-left,
+    .card-2 .testimonial-flag-top-left,
+    .card-3 .testimonial-flag-top-left {
+        width: 150px; 
+        height: 120px; 
+        top: -30px; 
+    }
+
+    .card-1 .testimonial-logo-top-right,
+    .card-2 .testimonial-logo-top-right,
+    .card-3 .testimonial-logo-top-right {
+        width: 100px; 
+        height: 50px; 
+        top: 10px; 
+        right: 2rem; 
+    }
+
+    .card-1 .testimonial-flag,
+    .card-2 .testimonial-flag,
+    .card-3 .testimonial-flag {
+        width: 30px; 
+        height: 30px; 
+        margin-bottom: 0.5rem;
+    }
+
+    .testimonial-row {
+        gap: 40px; 
+    }
+}
+
+@media (max-width: 320px) {
+    .testimonial-wrapper {
+        padding: 0 1rem 4rem 1rem; 
+    }
+
+    .testimonial-container {
+        width: 90%; 
+        height: 200px; 
+    }
+
+    .testimonial-card {
+        padding: 0.8rem 1rem; 
+    }
+
+    .testimonial-stars {
+        font-size: 1rem; 
+        margin-bottom: 6px;
+    }
+
+    .testimonial-author {
+        font-size: 0.8rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.5rem;
+        line-height: 1.6; 
+        margin-top: 3px; 
+        text-decoration: none;
+    }
+
+    .testimonial-arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .testimonial-arrow:first-child {
+        left: 25% !important;
+        bottom: -50px; 
+    }
+
+    .testimonial-arrow:last-child {
+        right: 25% !important; 
+        bottom: -50px; 
+    }
+
+    .testimonial-heading {
+        font-size: 1rem !important; 
+        margin-bottom: 3rem; 
+    }
+
+    
+    .card-1 .testimonial-flag-top-left,
+    .card-2 .testimonial-flag-top-left,
+    .card-3 .testimonial-flag-top-left {
+        width: 120px; 
+        height: 100px; 
+        top: -20px; 
+    }
+
+    .card-1 .testimonial-logo-top-right,
+    .card-2 .testimonial-logo-top-right,
+    .card-3 .testimonial-logo-top-right {
+        width: 80px; 
+        height: 40px; 
+        top: 5px; 
+        right: 1.5rem; 
+    }
+
+    .card-1 .testimonial-flag,
+    .card-2 .testimonial-flag,
+    .card-3 .testimonial-flag {
+        width: 25px; 
+        height: 25px; 
+        margin-bottom: 0.3rem; 
+    }
+
+    .testimonial-row {
+        gap: 20px;
+    }
 }
 @media (max-width: 900px){
     .testimonial-heading {
@@ -198,4 +416,32 @@
         font-size: 3.5rem;
         
     }
+    .testimonial-container{
+        width: 1100px;
+        height: 500px;
+    }
+    .card-3 .testimonial-flag-top-left, .card-2 .testimonial-flag-top-left, .card-1 .testimonial-flag-top-left {
+        width: 382px;
+        height: 300px;
+    }
+    .card-3 .testimonial-logo-top-right, .card-2 .testimonial-logo-top-right, .card-1 .testimonial-logo-top-right {
+        width: 200px;
+        height: 140px;
+    }
+    .card-3 .testimonial-flag, .card-2 .testimonial-flag, .card-1 .testimonial-flag {
+        width: 64px;
+        height: 64px;
+    }
+    .testimonial-author {
+          font-size: 1.5rem;
+    }
+    .testimonial-stars {
+        font-size: 2rem;
+    }
+    .testimonial-text {
+        font-size: 1.3rem;
+    }
 }
+
+
+

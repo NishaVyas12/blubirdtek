@@ -1,7 +1,7 @@
 .project_section {
   position: relative;
   overflow: hidden;
-  height: 200vh;
+  height: 200vh !important;
   background-color: #00020E;
 }
 
@@ -53,7 +53,7 @@
   padding: 6rem 0 4rem 0;
   font-size: 2rem;
   line-height: 1.4;
-  font-family: "NeueHaasDisplayRegular";
+  font-family: "Helvetica";
   font-weight: normal;
 }
 
