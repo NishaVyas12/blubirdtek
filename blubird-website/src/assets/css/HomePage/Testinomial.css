@@ -64,10 +64,10 @@
 .card-1 .testimonial-flag-top-left {
     width: 250px;
     height: 200px;
-    background: url('../../images/testinomial/top_flag.png') no-repeat center center;
+    background: url('../../images/testinomial/india_flag.png') no-repeat center center;
     background-size: contain;
     position: absolute;
-    top: -50px;
+    top: -30px;
     left: 0;
 }
 
@@ -84,7 +84,7 @@
 .card-1 .testimonial-flag {
     width: 40px;
     height: 40px; 
-    background: url('../../images/testinomial/american_flag.png') no-repeat center center; 
+    background: url('../../images/testinomial/india.png') no-repeat center center; 
     background-size: contain;
     margin-bottom: 1rem; 
 }
@@ -92,10 +92,10 @@
 .card-2 .testimonial-flag-top-left {
     width: 250px;
     height: 200px;
-    background: url('../../images/testinomial/top_flag.png') no-repeat center center;
+    background: url('../../images/testinomial/india_flag.png') no-repeat center center;
     background-size: contain;
     position: absolute;
-    top: -50px;
+    top: -30px;
     left: 0;
 }
 
@@ -112,7 +112,7 @@
 .card-2 .testimonial-flag {
     width: 40px;
     height: 40px; 
-    background: url('../../images/testinomial/american_flag.png') no-repeat center center; 
+    background: url('../../images/testinomial/india.png') no-repeat center center; 
     background-size: contain;
     margin-bottom: 1rem; 
 }
@@ -121,10 +121,10 @@
 .card-3 .testimonial-flag-top-left {
     width: 250px;
     height: 200px;
-    background: url('../../images/testinomial/top_flag.png') no-repeat center center;
+    background: url('../../images/testinomial/india_flag.png') no-repeat center center;
     background-size: contain;
     position: absolute;
-    top: -50px;
+    top: -30px;
     left: 0;
 }
 
@@ -141,7 +141,7 @@
 .card-3 .testimonial-flag {
     width: 40px;
     height: 40px; 
-    background: url('../../images/testinomial/american_flag.png') no-repeat center center; 
+    background: url('../../images/testinomial/india.png') no-repeat center center; 
     background-size: contain;
     margin-bottom: 1rem; 
 }

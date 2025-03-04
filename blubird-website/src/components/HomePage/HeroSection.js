@@ -3,7 +3,7 @@ import "../../assets/css/HomePage/HeroSection.css";
 import "../../assets/css/HomePage/BirdSection.css";
 import logo from "../../assets/images/logo_new.svg"; 
 import birdImage from "../../assets/images/bird.png"; 
-import crmVideo from "../../assets/images/Service/crm.mp4"; 
+import crmVideo from "../../assets/images/Service/office.mp4"; 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
